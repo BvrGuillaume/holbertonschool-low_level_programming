@@ -5,14 +5,14 @@
  * main - Entry point
  * Return: Always 0 (succes)
  */
-int main (void)
+int main(void)
 {
-	char: alphabet = 'a';
-	while: alphabet <= 'z')
-	       {
+char alphabet = 'a';
+while alphabet <= 'z')
+		{
 		       putchar(alphabet);
 		       alphabet++;
-	       }
+		}
 	       putchar('\n');
-	       return (0);
+return (0);
 }
