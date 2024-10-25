@@ -4,7 +4,7 @@
 * Return: Always 0 (Success)
 * Description: alphabet lowercase
 */
-void print_alphabet_10(void)
+void print_alphabet_x10(void)
 {
 	char letter;
 	int number;
@@ -15,7 +15,8 @@ void print_alphabet_10(void)
 		{
 			_putchar(letter);
 		}
-			number++;
-	}	
 		_putchar('\n');
+
+			number++;
+	}
 }
