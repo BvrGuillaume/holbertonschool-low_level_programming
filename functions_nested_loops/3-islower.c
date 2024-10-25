@@ -4,7 +4,7 @@
 *_islower - c lowercase
 * @c: letter tested
 * Return: Always 0 (Success)
-* Description: if c is lowercase return 1 else return 
+* Description: if c is lowercase return 1 else return
 */
 int _islower(int c)
 {
