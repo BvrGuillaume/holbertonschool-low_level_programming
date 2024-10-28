@@ -1,9 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <ctype.h>
-
 /**
- * main - check the code
+ * _isupper - check the code
  * @c: letter tested
  * Return: Always 0
  */
