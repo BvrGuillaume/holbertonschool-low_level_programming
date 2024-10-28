@@ -4,7 +4,7 @@
 
 /**
  * main - check the code
- @c: letter tested
+ * @c: letter tested
  * Return: Always 0
  */
 int _isupper(int c)
