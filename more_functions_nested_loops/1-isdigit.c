@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <ctype.h>
 /**
  * _isdigit - check the code
  * @c: letter tested
@@ -7,7 +8,7 @@
  */
 int _isdigit(int c)
 {
-	if (_isdigit(c))
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
