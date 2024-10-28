@@ -3,6 +3,7 @@
 #include <ctype.h>
 /**
  * print_line - check the code
+ * @n: number checked
  */
 void print_line(int n)
 {
