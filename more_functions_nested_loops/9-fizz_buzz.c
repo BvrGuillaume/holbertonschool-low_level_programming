@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - print fizz buzz
- * Return: Always 0(Success) 
+ * Return: Always 0(Success)
  */
 
 int main(void)
