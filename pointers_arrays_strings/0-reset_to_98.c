@@ -3,8 +3,7 @@
 
 /**
  * reset_to_98 - check the code 
- *
- * Return: Always 0.
+ *@n: letter checked
  */
 
 void reset_to_98(int *n)
