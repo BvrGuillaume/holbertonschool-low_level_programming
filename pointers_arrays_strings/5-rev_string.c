@@ -2,18 +2,22 @@
 #include "2-strlen.c"
 
 /**
- * print_rev - check the code
+ * rev_string - check the code
  *@s: letter checked
+ * Return: void
  */
+
 void rev_string(char *s)
 {
-	int i, len = _strlen(s);
+	int i, len;
 	char tmp;
-	
-	for (i = len; i >= len ; i--)
+
+	len = _strlen(s) - 1;
+	for (i = 0; i < (_strlen(s) / 2); i++)
 	{
 		tmp = s[i];
-		s[i] = s [len - i];
-		s[len - i] = tmp;
+		s[i] = s[len];
+		s[len] = tmp;
+		len--;
 	}
 }
