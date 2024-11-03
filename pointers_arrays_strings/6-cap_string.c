@@ -2,7 +2,6 @@
 /**
  * cap_string - function
  * @str: variable
- *
  * Return: char
  */
 
