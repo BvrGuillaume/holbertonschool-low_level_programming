@@ -1,45 +1,32 @@
 #include "main.h"
+#include <stdio.h>
+
+
 /**
- * cap_string - function
- * @str: variable
- * Return: char
- */
+* *cap_string - Entry Function
+* @str: reset The pointers
+* Return: returns nothing
+*/
 
 char *cap_string(char *str)
 {
-	char *ptr = str;
-	int maj, i = 0;
 
-	if (*str >= 'a' && *str <= 'z')
+	int i = 0;
+
+	while (str[i] != '\0')
 	{
-		*str = *str - ' ';
-	}
-
-	while (*str != '\0')
-	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-		|| str[i] == ',' || str[i] == ';' || str[i] == '.'
-		|| str[i] == '!' || str[i] == '?' || str[i] == '"'
-		|| str[i] == '(' || str[i] == ')' || str[i] == '{'
-		|| str[i] == '}')
-
+		if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' ||
+				str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' ||
+				str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"' ||
+				str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' ||
+				str[i - 1] == '}')
 		{
-			maj = 2;
+			if (str[i] >= 'a' && str[i] <= 'z')
+			{
+				str[i] -= 32;
+			}
 		}
-
-		if ((maj == 1) && (str[i] < 'a' || str[i] > 'z'))
-		{
-			maj = 0;
-		}
-
-		if ((maj == 1) && (str[i] >= 'a' && str[i] <= 'z'))
-		{
-			str[i] = str[i] - ' ';
-			maj = 0;
-		}
-
-		maj--;
 		i++;
 	}
-	return (ptr);
+	return (str);
 }
