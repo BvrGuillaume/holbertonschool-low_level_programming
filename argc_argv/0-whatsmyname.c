@@ -2,8 +2,8 @@
 
 /**
  * main - print name program
- * @argc: int argc
- * @argv: array of list
+ * @argc: int
+ * @argv: array
  * Return: 0 success
  */
 
