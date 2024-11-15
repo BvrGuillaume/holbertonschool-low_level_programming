@@ -1,59 +1,78 @@
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 #include "dog.h"
 
 /**
- * _strdup - copy string of char
- * @str: string
- * Return: new string or NULL
- */
-char *_strdup(const char *str)
+* _strlen - return length of a string
+* @s: char type
+* Return:  length of string
+*/
+
+int _strlen(char *s)
 {
-	char *copy;
-	int len;
-
-	if (str == NULL)
-		return (NULL);
-
-	len = strlen(str);
-	copy = malloc(sizeof(char) * (len + 1));
-	if (copy == NULL)
-		return (NULL);
-
-	strcpy(copy, str);
-	return (copy);
+int a;
+for (a = 0; s[a] != '\0'; a++)
+{
 }
-
+return (a);
+}
 /**
- * new_dog - create a new structure
- * @name: name of dog
- * @age: age of dog
- * @owner: owner name
- * Return: new structure or NULL
- */
+* _strcpy - function to copy string from source to destination
+* @dest: pointer to destinatioin of string to be copied
+* @src: pointer to source of string to be copied
+* Return: return the value at dest
+*/
+
+char *_strcpy(char *dest, char *src)
+{
+int a;
+for (a = 0; src[a] != '\0'; a++)
+{
+dest[a] = src[a];
+}
+dest[a] = '\0';
+return (dest);
+}
+/**
+* *new_dog - function to create new dog struct
+* @name: char type
+* @age: float type
+* @owner: char type
+* Return: Always success
+*/
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
-
-	dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
-		return (NULL);
-
-	dog->name = _strdup(name);
-	if (dog->name == NULL)
-	{
-		free(dog);
-		return (NULL);
-		}
-
-	dog->owner = _strdup(owner);
-	if (dog->owner == NULL)
-	{
-		free(dog->name);
-		free(dog);
-		return (NULL);
-		}
-
-	dog->age = age;
-	return (dog);
+dog_t *newd;
+newd = malloc(sizeof(struct dog));
+if (newd == NULL)
+return (NULL);
+if (name == NULL)
+{
+free(newd);
+return (NULL);
+}
+newd->name = malloc(sizeof(char) * (_strlen(name) + 1));
+if (newd->name == NULL)
+{
+free(newd);
+return (NULL);
+}
+_strcpy(newd->name, name);
+newd->age = age;
+if (owner == NULL)
+{
+free(newd->name);
+free(newd);
+return (NULL);
+}
+newd->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+if (newd->owner == NULL)
+{
+free(newd->name);
+free(newd);
+return (NULL);
+}
+_strcpy(newd->owner, owner);
+return (newd);
 }
