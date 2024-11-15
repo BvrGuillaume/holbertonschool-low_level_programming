@@ -5,7 +5,6 @@
 /**
  * _strdup - copy string of char
  * @str: string
- *
  * Return: new string or NULL
  */
 char *_strdup(const char *str)
@@ -30,7 +29,6 @@ char *_strdup(const char *str)
  * @name: name of dog
  * @age: age of dog
  * @owner: owner name
- *
  * Return: new structure or NULL
  */
 dog_t *new_dog(char *name, float age, char *owner)
